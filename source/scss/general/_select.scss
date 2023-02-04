@@ -1,0 +1,39 @@
+.select {
+	position: relative;
+
+    &.is-active {
+        .select__icon svg {
+            transform: scaleY(-1);
+        }
+
+        .select__body {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+.select__icon svg ,
+.select__body {
+    transition: all .4s;
+}
+
+
+@media screen and (min-width: 576px) {
+    .blog__wrapp-categories {
+        .select.is-active .select__body {
+            display: none;
+        }
+
+        .select__body {
+            display: flex;
+            position: initial;
+        }
+
+        .select__current {
+            border: 1px solid #ADB4B8;
+        }
+    }
+}
+
