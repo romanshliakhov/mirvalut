@@ -1,10 +1,13 @@
 .office {
   position: relative;
+  display: flex;
+  align-items: center;
   padding: 18px 0 19px;
   font-family: var(--font-family-cuprum);
   font-size: 16px;
   line-height: 120%;
   font-weight: 600;
+  transition: all 0.4s ease;
 
   &::before {
     content: '';
@@ -20,7 +23,79 @@
     transform: translateY(-50%);
   }
 
+  &:hover {
+    .office__btn {
+      opacity: 1;
+    }
+
+    .office__images {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   &__number {
     color: #27A5E7;
   }
+
+  &__btn {
+    position: absolute;
+    top: -1px;
+    right: -43px;
+    height: 96px;
+    width: 43px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-color: #d5e9f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+
+    pointer-events: none;
+  }
+
+  &__images {
+    position: absolute;
+    right: -300%;
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__image {
+    position: relative;
+    width: 300px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    position: absolute;
+    display: flex;
+    inset: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-size: 26px;
+    line-height: 120%;
+    color: #fff;
+    text-transform: uppercase;
+  }
 }
+
+

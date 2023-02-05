@@ -1,4 +1,6 @@
 // SPOLLERS
+const breakpoint = 769;
+
 const spollersArray = document.querySelectorAll('[data-spollers]');
 if (spollersArray.length > 0) {
     // Получение обычных слойлеров
