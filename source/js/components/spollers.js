@@ -1,7 +1,6 @@
 // SPOLLERS
-const breakpoint = 769;
-
 const spollersArray = document.querySelectorAll('[data-spollers]');
+
 if (spollersArray.length > 0) {
     // Получение обычных слойлеров
     const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
@@ -54,7 +53,7 @@ if (spollersArray.length > 0) {
             const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
             if (!spollersBlock.querySelectorAll('._slide').length) {
                 if (oneSpoller && !spollerTitle.classList.contains('_active')) {
-                    hideSpollersBody(spollersBlock);
+                    // hideSpollersBody(spollersBlock);
                 }
                 spollerTitle.classList.toggle('_active');
                 _slideToggle(spollerTitle.nextElementSibling, 500);

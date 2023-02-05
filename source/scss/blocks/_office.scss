@@ -1,7 +1,9 @@
 .office {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 18px 0 19px;
   font-family: var(--font-family-cuprum);
   font-size: 16px;
@@ -9,18 +11,10 @@
   font-weight: 600;
   transition: all 0.4s ease;
 
-  &::before {
-    content: '';
-    position: absolute;
-    background-image: url('../img/dollar-icon.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 29px;
-    left: -45px;
-    top: 50%;
-    transform: translateY(-50%);
+  @media screen and (max-width: 992px) {
+    padding: 1px 0;
+    display: grid;
+    grid-template-columns: 1fr 85px;
   }
 
   &:hover {
@@ -28,9 +22,41 @@
       opacity: 1;
     }
 
+    .office__wrapp-images {
+      opacity: 1;
+      visibility: visible;
+    }
+
     .office__images {
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  &__info {
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      margin-left: 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid #d7d7d7;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../img/dollar-icon.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 29px;
+      left: -45px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -52,19 +78,57 @@
     justify-content: center;
     opacity: 0;
     transition: all 0.4s ease;
-
     pointer-events: none;
+
+    @media screen and (max-width: 992px) {
+      width: 85px;
+      position: relative;
+      top: initial;
+      right: initial;
+      border-top-right-radius: initial;
+      border-bottom-right-radius: initial;
+      pointer-events: initial;
+      opacity: 1;
+    }
+
+    &._active ~ .office__wrapp-images {
+      display: flex;
+    }
+  }
+
+  &__wrapp-images {
+    display: flex;
+    position: absolute;
+    right: -300%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+      position: relative;
+      right: initial;
+      opacity: 1;
+      visibility: visible;
+      grid-column: span 2;
+    }
   }
 
   &__images {
-    position: absolute;
-    right: -300%;
     display: flex;
     align-items: center;
     grid-gap: 5px;
+    transition: all 0.4s ease;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s ease-in-out;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__image {
@@ -74,6 +138,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      height: clamp(170px, 26.21vw, 260px);
+    }
+
   }
 
   &__img {
@@ -86,6 +156,12 @@
       position: absolute;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 

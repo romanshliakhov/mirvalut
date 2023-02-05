@@ -1,10 +1,18 @@
 .offices {
   padding: 10px 0 65px;
 
+  @media screen and (max-width: 992px) {
+    padding-bottom: 0;
+  }
+
   &__wrapp {
     display: grid;
     grid-template-columns: 280px auto;
-    grid-gap: 10px;
+    grid-gap: 1px 10px;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__details {
@@ -15,33 +23,66 @@
   }
 
   &__title {
+    padding-left: 10px;
     font-family: var(--font-family-cuprum);
     font-size: 21px;
     line-height: 150%;
     font-weight: 700;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 30px;
+    }
   }
 
   &__items {
     padding-left: 55px;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 0;
+    }
   }
 
   &__item {
     border-top: 1px solid #d7d7d7;
     transition: all 0.4s ease;
 
+    @media screen and (max-width: 992px) {
+      border: none;
+    }
+
     &:first-child {
       border-top: 1px solid transparent;
 
+      @media screen and (max-width: 992px) {
+        border: none;
+      }
+
       &:hover {
         border-top: 1px solid #d7d7d7;
+
+        @media screen and (max-width: 992px) {
+          border: none;
+        }
       }
     }
 
     &:last-child {
       border-bottom: 1px solid transparent;
 
+      @media screen and (max-width: 992px) {
+        border: none;
+
+        .office__info {
+          border-bottom: none;
+        }
+      }
+
       &:hover {
         border-bottom: 1px solid #d7d7d7;
+
+        @media screen and (max-width: 992px) {
+          border: none;
+        }
       }
     }
   }
