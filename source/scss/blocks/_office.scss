@@ -89,6 +89,16 @@
       border-bottom-right-radius: initial;
       pointer-events: initial;
       opacity: 1;
+
+      svg {
+        transition: all 0.4s;
+      }
+
+      &._active {
+        svg {
+          transform: rotate(90deg);
+        }
+      }
     }
 
     &._active ~ .office__wrapp-images {
