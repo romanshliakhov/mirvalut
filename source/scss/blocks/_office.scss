@@ -102,12 +102,13 @@
     }
 
     &._active ~ .office__wrapp-images {
-      display: flex;
+      // display: flex;
+      // opacity: 1;
     }
   }
 
   &__wrapp-images {
-    display: flex;
+    // display: flex;
     position: absolute;
     right: -300%;
     opacity: 0;
@@ -115,7 +116,7 @@
     transition: all 0.6s ease;
 
     @media screen and (max-width: 992px) {
-      display: none;
+      // display: none;
       position: relative;
       right: initial;
       opacity: 1;

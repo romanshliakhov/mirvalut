@@ -14,7 +14,7 @@ const receive = currentForm.receive;
 
 const convertSend = function(currentValue, receiveValue){
   let result = receiveValue / currentValue;
-  return result.toFixed(2);
+  return result.toFixed(0);
 };
 
 const convertReceive = function(currentValue, receiveValue){
