@@ -7,16 +7,15 @@ function showStickyBlock() {
 setTimeout(showStickyBlock, 500);
 
 window.addEventListener("scroll", function () {
-  stickyBlock.classList.toggle("show");
+  stickyBlock.classList.remove('show');
 
-  let timeoutId = setTimeout(showStickyBlock, 3000);
+  if(!stickyBlock.classList.contains('show')){
+    function showStickyBlock() {
+      stickyBlock.classList.add('show');
+    }
 
-  clearTimeout(timeoutId, 500);
-
-  //  clearTimeout($.data(this, 'scrollTimer'));
-  //    $.data(this, 'scrollTimer', setTimeout(function() {
-  //      $(stickyBlock).fadeIn();
-  //    }, 550));
+    setTimeout(showStickyBlock, 1000);
+  }
  });
 
 
