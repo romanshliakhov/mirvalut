@@ -7,7 +7,7 @@
   padding: 0 20px;
 
   @media screen and (max-width: 576px) {
-    width: 100%;
+    width: max-content;
   }
 
 
@@ -23,8 +23,8 @@
     border-radius: 40px;
     padding: clamp(10px, 1.042vw, 20px) clamp(10px, 2.083vw, 40px);
     transition: all 0.4s ease-in-out;
-    transition-duration: 4s;
-    animation: animationshadow 4s infinite;
+    transition-duration: 2s;
+    animation: animationshadow 10s infinite;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22);
 
     @media screen and (max-width: 992px) {
@@ -50,15 +50,15 @@
 
   &__phone-icon {
     flex-shrink: 0;
-    width: 46px;
-    height: 46px;
+    width: 32px;
+    height: 32px;
     transition: all 0.4s ease-in-out;
     transition-duration: 2s;
-    animation: animationpulse 2s infinite;
+    animation: animationpulse 4s infinite;
 
     svg {
-      width: 46px;
-      height: 46px;
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -96,8 +96,8 @@
     border: 1px solid #229417;
     box-shadow: 1px 1px 5px #39cb2b;
     transition: all 0.4s ease-in-out;
-    transition-duration: 3s;
-    animation: animationpulse 3s infinite;
+    transition-duration: 2s;
+    animation: animationpulse 8s infinite;
     box-shadow: 1px 1px 5px #229417;
 
     @media screen and (max-width: 992px) {
@@ -112,7 +112,7 @@
     grid-gap: 5px;
     font-family: var(--font-family-cuprum);
     padding: 10px 40px;
-    font-size: clamp(20px, 3.121vw, 24px);
+    font-size: clamp(22px, 3.121vw, 24px);
     line-height: 120%;
     font-weight: 600;
     color: #fff;
@@ -128,10 +128,11 @@
     grid-gap: 5px;
     font-size: clamp(16px, 2.601vw, 20px);
     font-family: 400;
+    text-decoration: underline;
 
     svg {
-      width: 32px;
-      height: 32px;
+      width: 18px;
+      height: 18px;
     }
   }
 }
