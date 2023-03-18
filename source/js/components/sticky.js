@@ -10,11 +10,7 @@ window.addEventListener("scroll", function () {
   stickyBlock.classList.remove('show');
 
   if(!stickyBlock.classList.contains('show')){
-    function showStickyBlock() {
-      stickyBlock.classList.add('show');
-    }
-
-    setTimeout(showStickyBlock, 1000);
+    setTimeout(showStickyBlock, 1500);
   }
  });
 
