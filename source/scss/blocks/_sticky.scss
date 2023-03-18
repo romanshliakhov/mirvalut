@@ -1,10 +1,17 @@
 .sticky {
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: 30px;
+  transform: translateX(-50%) translateY(100vw);
+  bottom: 10px;
   width: max-content;
   padding: 0 20px;
+  transition-duration: 2s;
+  transition: all 1s ease;
+  // transform: translateY(-100%);
+
+  &.show {
+    transform: translateX(-50%) translateY(-30px);
+  }
 
   @media screen and (max-width: 576px) {
     width: max-content;
@@ -95,7 +102,7 @@
     background-color: #39cb2b;
     border: 1px solid #229417;
     box-shadow: 1px 1px 5px #39cb2b;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
     transition-duration: 2s;
     animation: animationpulse 8s infinite;
     box-shadow: 1px 1px 5px #229417;
